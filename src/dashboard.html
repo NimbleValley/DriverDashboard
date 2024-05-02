@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="dashboard-container">
+        <div id="dashboard-header">
+            <div id="header-button-container">
+                <button class="header-button" onclick="window.open('index.html', '_self')">Menu</button>
+                <button class="header-button">Auto</button>
+                <button class="header-button">Tele</button>
+            </div>
+            <div id="connect-status-container">Not connected!</div>
+        </div>
+        <div id="tele-dashboard-container">
+            <div id="intake-camera-cell-container"></div>
+            <div id="game-time-cell-container">
+                <h1 id="game-time-text">2:45</h1>
+            </div>
+            <div id="limelight-cell-container"></div>
+            <div id="robot-localization-cell-container"></div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="gsap.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>

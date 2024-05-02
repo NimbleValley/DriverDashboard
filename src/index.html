@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HexHound Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="home-container">
+        <img id="hexhound-image" src="img/hexhound-dog.png" alt="Check path">
+        <img id="hexhound-text" src="img/hexhound-text.png" alt="Check path">
+
+        <div id="home-button-container">
+            <button class="home-button" id="local-button" onclick="useLocal()">Local</button>
+            <button class="home-button active" id="radio-button" onclick="useRadio()">Radio</button>
+        </div>
+
+        <div class="loader"></div>
+    </div>
+
+    <script src="gsap.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="index-ui.js"></script>
+</body>
+</html>

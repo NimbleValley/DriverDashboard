@@ -1,0 +1,194 @@
+@font-face {
+    font-family: BDNippori;
+    src: url("./font/BD_Nippori_05.otf") format("opentype");
+}
+
+html,
+body {
+    margin: 0;
+}
+
+
+
+/* Home page */
+
+#home-container {
+    display: flex;
+    width: 100vw;
+    height: 100vw;
+    left: 0;
+    top: 0;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    flex-direction: column;
+}
+
+#hexhound-image {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    opacity: 0;
+    user-select: none;
+}
+
+#hexhound-text {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    opacity: 0;
+    user-select: none;
+}
+
+#home-button-container {
+    position: fixed;
+    display: flex;
+    z-index: 10;
+    bottom: 17vh;
+    width: 85vh;
+    justify-content: space-around;
+}
+
+.home-button {
+    font-size: 5vh;
+    font-family: BDNippori;
+    padding: 1vh 2.5vh 1vh 2.5vh;
+    background-color: black;
+    color: #F47820;
+    border: 0.75vh solid #F47820;
+    border-radius: 0.25vh;
+    transition: color 0.25s, background-color 0.5s;
+    width: 30vh;
+    opacity: 0;
+}
+
+.home-button:hover {
+    cursor: pointer;
+    background-color: #F47820;
+    color: black;
+}
+
+.active {
+    background-color: #F47820;
+    color: black;
+}
+
+.loader {
+    border: 16px solid #000000;
+    /* Light grey */
+    border-top: 16px solid #F47820;
+    border-left: 16px solid #F47820;
+    /* Blue */
+    border-radius: 50%;
+    width: 5vh;
+    height: 5vh;
+    animation: spin 2s linear infinite, grow 5s ease-in-out infinite;
+    position: fixed;
+    bottom: 2vh;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes grow {
+    0% {
+        scale: 1;
+    }
+    
+    50% {
+        scale: 0.75;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+
+
+
+/* Dashboard page */
+
+#dashboard-container {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 10vh 90vh;
+}
+
+#dashboard-header {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#tele-dashboard-container {
+    background-color: rgb(82, 82, 82);
+    display: grid;
+    grid-template-columns: 18vw 58vw 18vw;
+    grid-template-rows: 43vh 43vh;
+    column-gap: 2vw;
+    row-gap: 2vh;
+}
+
+#connect-status-container {
+    background-color: rgb(179, 41, 23);
+    width: fit-content;
+    font-size: 4.5vh;
+    margin-right: 2.5vh;
+    padding: 1vh 2vh 1vh 2vh;
+    border-radius: 10000vh;
+    font-weight: bold;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    user-select: none;
+}
+
+#header-button-container {
+    display: flex;
+    gap: 2.5vh;
+}
+
+.header-button {
+    background-color: rgb(0, 0, 0);
+    width: fit-content;
+    font-size: 4.5vh;
+    margin-left: 2.5vh;
+    padding: 1vh 2vh 1vh 2vh;
+    font-weight: bold;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 0.5vh solid #F47820;
+    transition: color 0.15s, background-color 0.3s;
+}
+
+.header-button:hover {
+    cursor: pointer;
+    background-color: #F47820;
+    color: #000000;
+}
+
+#game-time-text {
+    font-size: 47vh;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    line-height: 40vh;
+    text-align: center;
+    user-select: none;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: -2vh;
+    color: white;
+    text-shadow: black 0px 0px 50px;
+    background-color: black;
+}
