@@ -1,28 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div id="dashboard-container">
-        <div id="dashboard-header">
-            <div id="header-button-container">
-                <button class="header-button" onclick="window.open('index.html', '_self')">Menu</button>
-                <button class="header-button">Auto</button>
-                <button class="header-button">Tele</button>
-            </div>
-            <div id="connect-status-container">Not connected!</div>
-        </div>
         <div id="tele-dashboard-container">
-            <div id="intake-camera-cell-container"></div>
+            <div id="intake-state-cell-container">
+                <h2 id="intake-state-text">
+                    Intake Retracted
+                </h2>
+            </div>
             <div id="game-time-cell-container">
-                <h1 id="game-time-text">2:45</h1>
+                <h1 id="game-time-text">...</h1>
             </div>
             <div id="limelight-cell-container"></div>
             <div id="robot-localization-cell-container"></div>
+            <div id="intake-camera-cell-container"></div>
+        </div>
+        <div id="auto-dashboard-container">
+            <div id="auto-button-container">
+                <select name="auto-select" id="auto-select">
+                    <option value="Source 4-5">Source 4-5</option>
+                    <option value="Subwoofer 6-7-8">Subwoofer 6-7-8</option>
+                    <option value="Subwoofer 1-2-3">Subwoofer 1-2-3</option>
+                    <option value="Subwoofer 5-6">Subwoofer 5-6</option>
+                </select>
+                <div class="horizontal-container">
+                    <button class="auto-panel-button" onclick="switchAuto()">Resend</button>
+                    <button id="auto-blink-button" class="auto-panel-button" onclick="sendBlink()">2 Blinks</button>
+                </div>
+                <h1 id="auto-recieve-text">Recieved</h1>
+            </div>
+        </div>
+        <div id="dashboard-header">
+            <div id="header-button-container">
+                <button id="menu-button" class="header-button" onclick="window.open('index.html', '_self')">Menu</button>
+                <button id="auto-button" class="header-button active" onclick="showAuto()">Auto</button>
+                <button id="tele-button" class="header-button" onclick="showTele()">Tele</button>
+            </div>
+            <div id="connect-status-container">Not connected!</div>
         </div>
     </div>
 
@@ -30,4 +52,5 @@
     <script src="gsap.js"></script>
     <script src="client.js"></script>
 </body>
+
 </html>
