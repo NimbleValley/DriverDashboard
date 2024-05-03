@@ -30,7 +30,7 @@ function useLocal() {
 function useRadio() {
     localButton.classList = "home-button";
     radioButton.classList = "home-button active";
-    socket.emit('refresh', '3197');
+    socket.emit('refresh', '10.31.97.2');
 }
 
 socket.on('update', checkForConnection);
