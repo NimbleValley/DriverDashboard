@@ -129,7 +129,7 @@ switchAuto();
 
 function switchAuto() {
     let blinkNumber = autoRoutines.indexOf(autoElements.select.value) + 2;
-    autoElements.blinkButton.innerText = `${blinkNumber} Blinks`;
+    autoElements.blinkButton.innerText = `${3} Blinks`;
     socket.emit("update_auto_selection", autoElements.select.value);
 }
 
